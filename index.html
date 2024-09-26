@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>HD Interiors</title>
+  <style>
+    /* Global Styles */
+    body {
+      font-family: Arial, sans-serif;
+      color: #14213D;
+      background-color: #FEFAE0;
+      margin: 0;
+    }
+/* Navbar Styling */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #D4A373;
+  padding: 15px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Add a shadow for depth */
+}
+
+nav .logo {
+  font-size: 28px; /* Increase font size for prominence */
+  font-weight: bold;
+  color: #fff;
+  text-transform: uppercase; /* Make the logo text all uppercase for impact */
+  letter-spacing: 2px; /* Add spacing between letters for a sleek look */
+  transition: transform 0.3s ease, color 0.3s ease; /* Smooth hover effect */
+}
+
+nav .logo:hover {
+  color: #FEFAE0; /* Lighter hover color */
+  transform: scale(1.1); /* Slight enlargement on hover */
+}
+
+/* Navigation Links */
+nav ul {
+  list-style-type: none;
+  display: flex;
+  gap: 20px;
+}
+
+nav ul li {
+  display: inline;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #fff; /* Default color for links */
+  font-size: 18px; /* Increase font size for visibility */
+  font-weight: 600; /* Make the text slightly bolder */
+  padding: 10px 15px; /* Add padding for a clickable area */
+  border-radius: 5px; /* Slight rounding of the edges */
+  transition: background-color 0.3s ease, color 0.3s ease; /* Smooth hover effect */
+}
+
+nav ul li a:hover {
+  background-color: #FEFAE0; /* Change background on hover */
+  color: #14213D; /* Darken text color on hover */
+}
+
+    /* Carousel Styling */
+    .carousel {
+      width: 100%;
+      overflow: hidden;
+      max-height: 400px; /* Limit the height of the carousel */
+      margin: 0px 0; /* Add some margin around the carousel */
+    }
+
+    .carousel-inner {
+      display: flex;
+      width: 400%;
+      animation: slide 5s infinite;
+    }
+
+    .carousel-inner img {
+      width: 24%;
+      transition: transform 0.3s ease;
+    }
+
+    @keyframes slide {
+      0% { transform: translateX(0); }
+      25% { transform: translateX(-25%); }
+      50% { transform: translateX(-50%); }
+      75% { transform: translateX(-75%); }
+      100% { transform: translateX(0); }
+    }
+
+    /* Developer Section Styles */
+    .developer-section {
+      padding: 20px;
+      text-align: center; /* Center align text for better appearance */
+      background-color: #E9EDC9; /* Light background for contrast */
+      margin: 20px 0; /* Add some margin for spacing */
+    }
+
+    /* Button Styles */
+    .button {
+      background-color: #D4A373;
+      border: none;
+      color: white;
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+      box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+      transition: all 0.3s ease;
+    }
+
+    .button:hover {
+      background-color: #B38C60;
+      box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
+    }
+
+    /* Footer Styles */
+    footer {
+      background-color: #CCD5AE;
+      padding: 20px;
+      text-align: center;
+    }
+
+    footer a {
+      text-decoration: none;
+      color: #14213D;
+      margin-right: 20px;
+    }
+    /* Welcome Section Styles */
+.welcome-section {
+  background-color: #14213D; /* Deep, luxurious background color */
+  color: #fff;
+  padding: 60px 20px;
+  text-align: center;
+  margin: 20px 0;
+}
+
+.welcome-section .welcome-content {
+  max-width: 800px; /* Limit the width for a clean, centered look */
+  margin: 0 auto;
+}
+
+.welcome-section h1 {
+  font-size: 36px; /* Bold and prominent heading */
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.welcome-section p {
+  font-size: 18px; /* Slightly larger font for emphasis */
+  margin-bottom: 30px;
+  line-height: 1.6;
+}
+
+.welcome-section .button {
+  background-color: #D4A373; /* Same button style for consistency */
+  color: #fff;
+  font-size: 18px;
+  padding: 12px 30px;
+}
+/* Efficiency Section Styles */
+.efficiency-section {
+  background-color: #FEFAE0; /* Light background to contrast with the previous section */
+  padding: 40px 20px;
+  margin: 20px 0;
+}
+
+.efficiency-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px; /* Limit width for a neat layout */
+  margin: 0 auto;
+}
+
+.efficiency-image {
+  flex: 1;
+  padding-right: 20px;
+}
+
+.efficiency-image img {
+  width: 100%;
+  border-radius: 10px; /* Rounded corners for a refined look */
+  box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.2); /* Soft shadow for depth */
+}
+
+.efficiency-text {
+  flex: 1;
+  padding-left: 20px;
+}
+
+.efficiency-text h2 {
+  font-size: 28px;
+  color: #14213D; /* Deep color for the heading */
+  margin-bottom: 20px;
+}
+
+.efficiency-text p {
+  font-size: 18px;
+  line-height: 1.6;
+  color: #333;
+}
+/* Services Section Styles */
+.services-section {
+  background-color: #E9EDC9; /* Soft background for the services section */
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.services-section h2 {
+  font-size: 32px;
+  color: #14213D; /* Dark color for contrast */
+  margin-bottom: 20px;
+}
+
+.services-section .services-description {
+  font-size: 18px;
+  margin-bottom: 40px;
+  color: #333;
+}
+
+/* Services Container for Flex Layout */
+.services-container {
+  display: flex;
+  justify-content: space-between; /* Spread out the service items */
+  align-items: flex-start; /* Align items at the top */
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Individual Service Item Styling */
+.service-item {
+  display: flex;
+  flex-direction: column; /* Stack image and text vertically */
+  align-items: center;
+  max-width: 30%; /* Limit width of each service item */
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effects */
+}
+
+.service-item:hover {
+  transform: translateY(-10px); /* Slight lift on hover */
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2); /* Add a shadow effect on hover */
+}
+
+/* Image Styling with Hover Effect */
+.service-item img {
+  width: 100%;
+  border-radius: 10px; /* Rounded corners for a polished look */
+  box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
+  transition: transform 0.3s ease; /* Smooth image zoom on hover */
+}
+
+.service-item:hover img {
+  transform: scale(1.05); /* Slight zoom on hover */
+}
+
+/* Text Styling */
+.service-info h3 {
+  font-size: 24px;
+  color: #14213D; /* Default text color */
+  margin-bottom: 10px;
+  transition: color 0.3s ease; /* Smooth color change on hover */
+}
+
+.service-item:hover h3 {
+  color: #D4A373; /* Change to accent color on hover */
+}
+
+.service-info p {
+  font-size: 16px;
+  color: #555;
+  transition: color 0.3s ease; /* Smooth color change on hover */
+}
+
+.service-item:hover p {
+  color: #333; /* Darken the text color slightly on hover */
+}
+
+/* Ensure responsive design for smaller screens */
+@media (max-width: 768px) {
+  .services-container {
+    flex-direction: column; /* Stack services vertically */
+    align-items: center;
+  }
+
+  .service-item {
+    max-width: 80%; /* Expand width on smaller screens */
+    margin-bottom: 40px; /* Add space between services */
+  }
+}
+
+
+  </style>
+  <script>
+    // Redirect to portfolio page
+    function redirectToPortfolio() {
+      window.location.href = "portfolio.html"; // Link to portfolio
+    }
+
+    // Adding current date to footer
+    document.addEventListener("DOMContentLoaded", function() {
+      document.getElementById("current-date").innerText = `Today's date: ${new Date().toLocaleDateString()}`;
+    });
+  </script>
+</head>
+<body>
+  <!-- Navbar Section -->
+  <nav>
+    <div class="logo">HD Interiors</div>
+    <ul>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Carousel Section -->
+  <div class="carousel">
+    <div class="carousel-inner">
+      <img src="image1.jpg" alt="Image 1">
+      <img src="image2.jpg" alt="Image 2">
+      <img src="image3.jpg" alt="Image 3">
+      <img src="image4.jpg" alt="Image 4">
+      <img src="image5.jpg" alt="Image 5">
+    </div>
+  </div>
+<!-- Welcome Section -->
+<section class="welcome-section">
+    <div class="welcome-content">
+      <h1>Welcome to HD Interiors</h1>
+      <p>Where luxury meets comfort. We design spaces that reflect elegance, sophistication, and style.</p>
+      <button class="button" onclick="window.location.href='https://www.instagram.com/zimmermannmakes'">Check Our Instagram</button>
+    </div>
+  </section>
+  
+  <!-- Efficiency Section -->
+<section class="efficiency-section">
+    <div class="efficiency-container">
+      <div class="efficiency-image">
+        <img src="image6.jpg" alt="Interior Design Project">
+      </div>
+      <div class="efficiency-text">
+        <h2>Efficient Interior Designers for Your Next Renovation</h2>
+        <p>At HD Interiors, we blend creativity, functionality, and modern trends to bring your dream spaces to life. With a keen eye for detail and a commitment to quality, we ensure every project is handled efficiently, meeting deadlines without compromising on luxury and comfort. Let us transform your space into a masterpiece tailored just for you.</p>
+      </div>
+    </div>
+  </section>
+<!-- Services We Offer Section -->
+<section class="services-section">
+    <h2>Services We Offer</h2>
+    <p class="services-description">At HD Interiors, we offer a variety of interior design services that bring beauty and functionality to your spaces.</p>
+    
+    <div class="services-container">
+      <!-- Service 1 -->
+      <div class="service-item">
+        <img src="image7.jpg" alt="Luxury Living Room Design">
+        <div class="service-info">
+          <h3>Luxury Living Room Design</h3>
+          <p>Transform your living space into a luxurious haven, blending elegance with comfort.</p>
+        </div>
+      </div>
+  
+      <!-- Service 2 -->
+      <div class="service-item">
+        <img src="image8.jpg" alt="Kitchen Renovation">
+        <div class="service-info">
+          <h3>Modern Kitchen Renovation</h3>
+          <p>Upgrade your kitchen with modern finishes, smart solutions, and a sleek design.</p>
+        </div>
+      </div>
+  
+      <!-- Service 3 -->
+      <div class="service-item">
+        <img src="image9.jpg" alt="Office Space Optimization">
+        <div class="service-info">
+          <h3>Office Space Optimization</h3>
+          <p>Maximize productivity with tailored office designs that inspire creativity and focus.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  
+  <!-- Developer Section -->
+  <section class="developer-section">
+    <h2>Meet the Developer!</h2>
+    <p>Hello! I am the developer of this website, passionate about creating stunning web experiences. Want to know more?</p>
+    <button class="button" onclick="redirectToPortfolio()">Check Portfolio</button>
+  </section>
+
+  <!-- Footer Section -->
+  <footer>
+    <div class="footer-links">
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <div class="footer-info">
+      <p>&copy; 2024 HD Interiors. All rights reserved.</p>
+      <p id="current-date"></p>
+    </div>
+  </footer>
+
+  <script src="scripts.js"></script>
+</body>
+</html>
